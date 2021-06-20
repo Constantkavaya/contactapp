@@ -1,7 +1,9 @@
 package com.example.contactproject
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -12,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         contactNames()
     }
     fun  contactNames(){
-        var  rivcontact=findViewById<RecyclerView>(R.id.rivcontactlist)
+        var  rivcontactlist=findViewById<RecyclerView>(R.id.rivcontactlist)
 
         var  listContacts= listOf(
             Contacts("Lulu Hassan","0786543245","loulohassan@gmail.com"),
@@ -21,7 +23,8 @@ class MainActivity : AppCompatActivity() {
 
         )
         var coursesAdapter=ContactNumbers(listContacts)
-        rivcontact.layoutManager= LinearLayoutManager(baseContext)
-        rivcontact.adapter=coursesAdapter
+        rivcontactlist.layoutManager= LinearLayoutManager(baseContext)
+        rivcontactlist.adapter=coursesAdapter
+
     }
 }
